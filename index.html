@@ -1,59 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine Baby?</title>
+    <title>Do të bëhesh Valentini im? 💖</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Icon -->
     <link rel="Icon" href="images/heart.gif" type="image/gif">
 </head>
 <body>
+    <!-- Sfond muzike -->
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/nhlWXm4jeGE?autoplay=1&loop=1&playlist=nhlWXm4jeGE" frameborder="0" allow="autoplay" style="display:none;"></iframe>
+
     <div class="hearts"></div>
     <div class="container">
-        <!-- Step 1 -->
+        <!-- Hapi 1 -->
         <div class="step active" id="step1">
-            <img src="images/AshSnow.gif" alt="Cute Cat" class="cat-img">
-            <h1>Will you be my Valentine? 💝</h1>
+            <img src="images/AshSnow.gif" alt="Mace e bukur" class="cat-img">
+            <h1>Do të bëhesh Valentini im? 💝</h1>
             <div class="buttons">
-                <button class="btn btn-yes" onclick="goToStep2()">Yes</button>
-                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">No</button>
+                <button class="btn btn-yes" onclick="goToStep2()">Po 😍</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Jo 😅</button>
             </div>
         </div>
 
-            <!-- Step 2 -->
+        <!-- Hapi 2 -->
         <div class="step" id="step2">
-                <img src="images/are u sure.gif" alt="Cute Cat in Love" class="cat-img">
-                <h1>Are you sure you want to be my valentine? 😼</h1>
-                <div class="buttons">
-                <button class="btn btn-yes" onclick="goToStep3()">Yes, 100% Sure</button>
-                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Let me think...</button>
-            </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="step" id="step3">
-            <img src="images/Hugging.gif" alt="Cute Cat in Love" class="cat-img">
-            <h1>Promise me you'll always be my valentine ❤️</h1>
+            <img src="images/are u sure.gif" alt="Mace e dashuruar" class="cat-img">
+            <h1>Je i sigurt që do të bëhesh Valentini im? 😼</h1>
             <div class="buttons">
-                <button class="btn btn-yes" onclick="finalStep()">Yes, I Promise</button>
+                <button class="btn btn-yes" onclick="goToStep3()">Po, 100% i sigurt ❤️</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Le të mendoj pak… 🤔</button>
             </div>
         </div>
 
-           <div class="final-message">
-    <img src="images/kisses.gif" alt="Cute Cat in Love" class="cat-img">
-    <p>Yaaaaaay 😍 Ma bëre Shën Valentinin më të bukur se kurrë! Të dua shumë ❤️</p>
-    <p style="margin-top: 15px;">
-        Më shkruaj duke klikuar butonin më poshtë 💌  
-        Po të pres, zemra ime 😘
-    </p>
-</div>
+        <!-- Hapi 3 -->
+        <div class="step" id="step3">
+            <img src="images/Hugging.gif" alt="Mace duke përqafuar" class="cat-img">
+            <h1>Premto që gjithmonë do të jesh Valentini im ❤️</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="finalStep()">Po, e premtoj 😘</button>
+            </div>
+        </div>
 
-<a href="https://snapchat.com/t/drJsvlPo" class="facebook-btn" target="_blank">
-    Më shkruaj këtu 💕
-</a>
-</div> <script src="js/script.js"></script> </body> </html>
+        <!-- Mesazhi final -->
+        <div class="final-message">
+            <img src="images/kisses.gif" alt="Mace e dashuruar" class="cat-img">
+            <p>Yaaaaaay 😍 Ma bëre Shën Valentinin më të bukur se kurrë! Të dua shumë ❤️</p>
+            <p style="margin-top: 15px;">
+                Më shkruaj duke klikuar butonin më poshtë 💌  
+                Po të pres, zemra ime t puth forttt 😘
+            </p>
+        </div>
 
-        
+        <a href="https://snapchat.com/t/drJsvlPo" class="facebook-btn" target="_blank">
+            Më shkruaj këtu zogu 💕
+        </a>
+    </div>
 
-
+    <script src="js/script.js"></script>
+</body>
+</html>
