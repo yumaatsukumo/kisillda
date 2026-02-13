@@ -10,7 +10,18 @@
 </head>
 <body>
     <!-- Sfond muzike -->
-    <iframe width="0" height="0" src="https://www.youtube.com/embed/nhlWXm4jeGE?autoplay=1&loop=1&playlist=nhlWXm4jeGE" frameborder="0" allow="autoplay" style="display:none;"></iframe>
+<button id="playMusic">Luaj Muzikën 💖</button>
+
+<script>
+const music = new Audio('ssstik.io_1771020399102.mp3');
+music.loop = true;
+
+document.getElementById('playMusic').addEventListener('click', () => {
+    music.play();
+    document.getElementById('playMusic').style.display = 'none'; // fsheh butonin pas klikimit
+});
+</script>
+
 
     <div class="hearts"></div>
     <div class="container">
@@ -61,3 +72,4 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
