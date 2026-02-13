@@ -9,18 +9,41 @@
     <link rel="Icon" href="images/heart.gif" type="image/gif">
 </head>
 <body>
-    <!-- Sfond muzike -->
-<button id="playMusic">Luaj Muzikën 💖</button>
+<!-- Butoni i madh për muzikën -->
+<button id="playMusic" style="
+    font-size: 28px;
+    padding: 25px 50px;
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.2s;
+">
+Luaj Muzikën 💖
+</button>
+
+<!-- Embed YouTube Video (fshehur) -->
+<iframe id="youtubePlayer" width="0" height="0"
+    src="https://www.youtube.com/embed/nhlWXm4jeGE?enablejsapi=1&loop=1&playlist=nhlWXm4jeGE"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
 
 <script>
-const music = new Audio('ssstik.io_1771020399102.mp3');
-music.loop = true;
+// Kontroll për butonin e madh
+const playBtn = document.getElementById('playMusic');
+const player = document.getElementById('youtubePlayer');
 
-document.getElementById('playMusic').addEventListener('click', () => {
-    music.play();
-    document.getElementById('playMusic').style.display = 'none'; // fsheh butonin pas klikimit
+playBtn.addEventListener('click', () => {
+    // Luaj video me zë
+    player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    playBtn.style.display = 'none'; // fsheh butonin pas klikimit
 });
 </script>
+
 
 
     <div class="hearts"></div>
@@ -72,4 +95,5 @@ document.getElementById('playMusic').addEventListener('click', () => {
     <script src="js/script.js"></script>
 </body>
 </html>
+
 
