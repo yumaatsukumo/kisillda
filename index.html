@@ -26,23 +26,33 @@
 Luaj Muzikën 💖
 </button>
 
-<!-- Embed YouTube Video (fshehur) -->
-<iframe id="youtubePlayer" width="0" height="0"
-    src="https://www.youtube.com/embed/nhlWXm4jeGE?enablejsapi=1&loop=1&playlist=nhlWXm4jeGE"
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+<!-- Div për player -->
+<div id="player" style="display:none;"></div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-// Kontroll për butonin e madh
-const playBtn = document.getElementById('playMusic');
-const player = document.getElementById('youtubePlayer');
+let player;
 
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '0',
+        width: '0',
+        videoId: 'nhlWXm4jeGE', // Video ID nga YouTube link-u yt
+        playerVars: {
+            autoplay: 0, // nuk fillon automatikisht
+            loop: 1,
+            playlist: 'nhlWXm4jeGE'
+        }
+    });
+}
+
+const playBtn = document.getElementById('playMusic');
 playBtn.addEventListener('click', () => {
-    // Luaj video me zë
-    player.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-    playBtn.style.display = 'none'; // fsheh butonin pas klikimit
+    player.playVideo(); // Luaj muzikën
+    playBtn.style.display = 'none'; // fsheh butonin
 });
 </script>
+
 
 
 
@@ -95,5 +105,6 @@ playBtn.addEventListener('click', () => {
     <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
